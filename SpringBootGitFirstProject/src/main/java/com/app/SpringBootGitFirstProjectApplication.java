@@ -17,7 +17,7 @@ public class SpringBootGitFirstProjectApplication implements CommandLineRunner {
 		System.out.println("No.of beans = "+beanNames.length);
 		Arrays.sort(beanNames);
 		for(String s:beanNames) {
-			System.out.println(s);
+			System.out.println(s) ;
 		}
 	}
 	@Override
