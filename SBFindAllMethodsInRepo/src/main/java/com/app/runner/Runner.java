@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Component;
@@ -46,6 +48,11 @@ public class Runner  implements CommandLineRunner {
 		List<Product> ascSortedList = repo.findAll(Sort.by(Direction.ASC, "pcode"));
 		System.out.println("--------sortBy pcode Asc------");
 		ascSortedList.forEach(System.out::println);
+		
+		PageRequest pageable = PageRequest.of(0, 3);
+		Page<Product> pagingRecords = repo.findAll(pageable);
+		System.out.println("--------Pagination------");
+		pagingRecords.forEach(System.out::println);
 	}
 
 }
