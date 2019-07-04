@@ -75,6 +75,8 @@ public class Runner  implements CommandLineRunner {
 		Example<Product> exProd = Example.of(p1);
 		
 		
+		
+		
 	}
 
 }
