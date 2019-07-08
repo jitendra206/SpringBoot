@@ -73,10 +73,6 @@ public class Runner  implements CommandLineRunner {
 		Product p1 = new Product();
 		p1.setPcost(20.2);
 		Example<Product> exProd = Example.of(p1);
-		
-		
-		
-		
 	}
 
 }
